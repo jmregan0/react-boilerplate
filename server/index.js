@@ -2,12 +2,13 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 // for server logs to help debugging
 app.use(morgan('dev'));
 
 // static middleware
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.resolve(__dirname, '../public')))
 
 // requests contain a body. If you want to use it in req.body, you will need some body parsing middleware
 app.use(bodyParser.json());
@@ -18,11 +19,11 @@ app.use('/api', require('./api'));
 
 // didn't match route. Send back index.html
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../public/index.html');
+  res.sendFile(path.resolve(__dirname, '../index.html'));
 });
 
 // didn't find what you were looking for?
-router.use(function(req, res, next){
+app.use(function(req, res, next){
   const err = new Error('Not found!');
   err.status = 404;
   next(err);
