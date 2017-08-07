@@ -51,8 +51,3 @@ const setSaltAndPassword = user => {
 
 User.beforeCreate(setSaltAndPassword)
 User.beforeUpdate(setSaltAndPassword)
-
-
-
-// Define Associations between models here.
-
