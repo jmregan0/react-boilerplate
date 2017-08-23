@@ -9,8 +9,8 @@ const db = require('../db/index.js');
 const PORT = process.env.PORT || 3000
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const sessionStore = new SequelizeStore({db})
-
 if (process.env.NODE_ENV !== 'production'){require('../secrets')}
+const toSyncOrNot = process.env.NODE_ENV !== 'production' ? {force: true} : ''
 
 // passport registration
 passport.serializeUser((user, done) => done(null, user.id))
@@ -42,7 +42,7 @@ const createApp = () => {
   app.use(passport.session())
 
   // auth route
-  app.use('/auth', require('./auth'))
+  // app.use('/auth', require('./auth'))
 
   // establish api routes
   app.use('/api', require('./api'));
@@ -72,11 +72,11 @@ const createApp = () => {
 
 const startListening = () => {
   app.listen(PORT, function(){
-    console.log('Cooking on port 3000!')
+    console.log('Listening on port 3000!')
   })
 }
 
-const syncDb = () => db.sync()
+const syncDb = () => db.sync(toSyncOrNot)
 
 
 // require.main evaluates true when run from command line ('node server/index.js')
