@@ -1,19 +1,31 @@
+# Boilerplate React Setup
 
-Boilerplate for your project! You are ready to start working.
 
-1) NPM install your dependencies.
-2) ADD YOUR DAMN .gitignore!
+### 1) NPM install your dependencies.
+### 2) ADD YOUR DAMN .gitignore before you forget
 
-ignore these while you're at it:
-  node_modules
-  public/bundle.js
-  secrets.json
+#### ignore these while you're at it:
+1) node_modules
+2) public/bundle.js
+3) secrets.json
 
-3) Name your app in package.json
-4) Create your database and then hook it up in db/index.js
-5) Start linking up visual components in app/main.jsx
+### 3) Name your app in package.json
 
-Tech stack used:
+### 4) Start linking up visual components in app/main.jsx
+
+---
+
+### Some Notes:
+* Server works on Node/Express
+* 'npm start' will run webpack -w and nodemon on your server/index
+* Server initializes a passport config on server/index.js, which you can obviously use as is or remove.
+* If you wish to use SQL, there is some minimal setup done. You will need to create the database on your machine and then hook it up in db/index.js
+* Basic React-Routing template has been added
+* Assumes the basic file structure of action-creators, components, containers, and reducers for React which you can tweak to your preferences.
+
+---
+
+### Tech stack used:
 -Node
 -Express
 -React
@@ -23,20 +35,3 @@ Tech stack used:
 -SQL
 -Postgres
 -Sequelize ORM
-
-░▄░░░░█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█░░░░░░
-░█░░░░█░▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄░█░░░░▄░
-░█░░░░█░█░░░░░░░░░░░░░░█░█░░░░█░
-░█░░░░█░█░░░▀░░░░░░▀░░░█░█░░░░█░
-░▀█░░░█░█░░░░▄▄▄▄▄▄░░░░█░█░░░░█░
-░░█▄░░█░█░░░░█▄░░▄█░░░░█░█░░▄█▀░
-░░░▀█░█░█░░░░░▀▀▀▀░░░░░█░█▄█▀░░░
-░░░░░▀█░▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀░█▀░░░░░
-░░░░░░█░████████░░░▄░░▀░░█░░░░░░
-░░░░░░█░░░▄░░░░░░▄███▄░░░█░░░░░░
-░░░░░░█░▄▄█▄▄░░░░░░░░░▄▄░█░░░░░░
-░░░░░░█░░░█░░░░░░░░░▄░▀▀░█░░░░░░
-░░░░░░█░░░░░░░░░░░▄███▄░░█░░░░░░
-░░░░░░█░███░███░░░░▀█▀░░░█░░░░░░
-░░░░░░█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█░░░░░░
-░░░░░░░░░░░░█░░░░░░█░░░░░░░░░░░░

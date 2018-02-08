@@ -11,6 +11,11 @@ class Routes extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/path" component={Path} />
+            {/* These components above don't exist yet.
+                Right now they are just placeholders for
+                you to see the pattern. Make your own
+                components in /components and then
+                import and link them here */}
           </Switch>
       </BrowserRouter>
     )
