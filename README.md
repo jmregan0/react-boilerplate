@@ -22,6 +22,7 @@
 * If you wish to use SQL, there is some minimal setup done. You will need to create the database on your machine and then hook it up in db/index.js
 * Basic React-Routing template has been added
 * Assumes the basic file structure of action-creators, components, containers, and reducers for React which you can tweak to your preferences.
+* If you have never used React, take some time to figure out how your react components make their way into the DOM. Start in index.html, and then take a look at app/main.jsx if you are lost.
 
 ---
 
