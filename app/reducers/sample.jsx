@@ -68,7 +68,7 @@ export const updateDataSet = (data) => {
   this file. You can skip ahead to that and just take a quick look
   at it.
 
-  You will notice it's a function that its just a function that
+  You will notice that its just a function that
   accepts state and action as its 2 arguments. The action creator you
   just saw above will be passed in as the second argument (action).
 
@@ -120,7 +120,7 @@ export const fetchData = () =>
 
   Note that:
 
-  1) We don't mutate the state. We create a copy with Object.assign(). Object.assign(state, { visibilityFilter: action.filter }) is also wrong: it will mutate the first argument. You must supply an empty object as the first parameter. You can also enable the object spread operator proposal to write { ...state, ...newState } instead.
+  1) We don't mutate the state. We create a copy with Object.assign(). You must supply an empty object as the first parameter. You can also enable the object spread operator proposal to write { ...state, ...newState } instead.
 
   2) We return the previous state in the default case. It's important to return the previous state for any unknown action.
 
